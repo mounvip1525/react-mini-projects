@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Die from './Die';
+import RollDie from './RollDie';
 
 function App() {
   return (
     <div className="App">
-      <Die face="four"/>
+      <RollDie />
     </div>
   );
 }
