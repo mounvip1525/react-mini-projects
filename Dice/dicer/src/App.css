@@ -4,8 +4,10 @@
 .dropdown{
   text-align: end;
   position:absolute;
-  top:20%;
-  right:40%;
+  top:12%;
+  text-align: center;
+  align-items: center;
+  width:100%;
 }
 input{
   width:5vw

@@ -28,11 +28,10 @@ class App extends React.Component {
   return (
     <div className="App">
       <div className='dropdown'>
-        <label htmlFor="range">How many ? </label>
+        <label htmlFor="range">How many Dice? </label>
         <input type="text" placeholder="Max 8" onChange={(e)=>this.handleChange(e)} />
       </div>
       <RollDie num={this.state.num}/>
-      {/* <RollDie /> */}
     </div>
   );
   }
