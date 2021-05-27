@@ -11,3 +11,25 @@
     font-size:1.5em;
     display:inline-block
 }
+.Lottery{
+    border:solid 1.5px gray;
+    padding:1em 0 2em 0;
+    text-align: center;
+    margin:1em auto auto;
+    border-radius: 10px;
+    width:40em;
+}
+.Lottery button{
+    width:15em;
+    padding:0.95em;
+    border-radius: 3px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background:black;
+    color:white;
+    margin-top:3%;
+}
+.Lottery button:active{
+    transform:scale(0.9)
+}
