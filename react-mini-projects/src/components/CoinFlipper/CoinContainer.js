@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import './styles.css'
 import Coin from './Coin';
-import { choice } from './helpers';
-import heads from '../../assets/head.png';
-import tails from '../../assets/tail.png';
+import { choice } from '../helpers';
 
 export default class CoinContainer extends Component {
     static defaultProps = {

@@ -4,6 +4,7 @@ import { Switch , Route } from 'react-router-dom';
 import Lottery from './containers/Lottery';
 import Dice from './containers/Dice';
 import CoinFlipper from "./containers/CoinFlipper";
+import ColorBox from "./containers/ColorBox";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/Lottery" exact component={Lottery} />
           <Route path="/Dice" component={Dice} />
           <Route path="/Coin" component={CoinFlipper} />
+          <Route path="/colorBox" component={ColorBox} />
         </Switch>
       </div>
   </React.Fragment>
