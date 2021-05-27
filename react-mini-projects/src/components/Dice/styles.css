@@ -1,0 +1,63 @@
+.Die{
+    padding:1%;
+    font-size:20vh;
+    color:rgb(70, 27, 111);
+    margin:1%;
+    width:20%;
+}
+.RollDie{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width:70vw;
+    margin:auto;
+}
+.dice-container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:80%;
+}
+.RollDie button{
+    width:15vw;
+    padding:0.95em;
+    border-radius: 3px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background:black;
+    color:white;
+    margin-top:3%;
+}
+.RollDie button:active{
+    transform: scale(0.9);
+}
+.rolling{
+    animation-name: wobble;
+    animation-duration: 1s;
+}
+@keyframes wobble{
+    from {
+        transform:translate3d(0,0,0);
+    }
+    15% {
+        transform: translate3d(-25%,0,0) rotate3d(0,0,1,-5deg);
+    }
+    30%{
+        transform: translate3d(20%,0,0) rotate3d(0,0,1,3deg);
+    }
+    45%{
+        transform: translate3d(-15%,0,0) rotate3d(0,0,1,-3deg);
+    }
+    60%{
+        transform: translate3d(10%,0,0) rotate3d(0,0,1,2deg);
+    }
+    75%{
+        transform: translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);
+    }
+    to {
+        transform: translate3d(0,0,0);
+    }
+}

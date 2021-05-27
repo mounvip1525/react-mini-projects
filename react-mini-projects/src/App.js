@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import { Switch , Route } from 'react-router-dom';
 import Lottery from './containers/Lottery';
-import Dice from './containers/RollDice';
+import Dice from './containers/Dice';
 
 function App() {
   return (

@@ -1,3 +1,14 @@
 .App {
   text-align: center;
 }
+.dropdown{
+  text-align: end;
+  position:absolute;
+  top:12%;
+  text-align: center;
+  align-items: center;
+  width:100%;
+}
+input{
+  width:5vw
+}
