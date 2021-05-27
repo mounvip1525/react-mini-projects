@@ -2,6 +2,14 @@
     height:200px;
     width:200px;
 }
+@keyframes flip_animation {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+  }
+.flip{
+    animation-name: flip_animation;
+    animation-duration: 1s;
+}
 .coin-container{
     border:2px solid purple;
     width:max-content;
@@ -18,4 +26,7 @@
     background:black;
     color:white;
     margin-top:1%;
+}
+.coin-container button:active{
+    transform:scale(0.9)
 }

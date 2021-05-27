@@ -7,7 +7,7 @@ export default class Coin extends Component {
     render() {
         return (
             <div>
-                <img src={this.props.coin.side === "heads" ? heads : tails } alt={this.props.coin.side} className="coin"/>
+                <img src={this.props.coin.side === "heads" ? heads : tails } alt={this.props.coin.side} className={`coin ${this.props.isFlipping ? "flip" : ""}`}/>
             </div>
         )
     }
