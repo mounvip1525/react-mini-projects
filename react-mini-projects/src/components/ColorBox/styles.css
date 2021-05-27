@@ -1,4 +1,11 @@
 .Box{
-    height:20em;
-    width:20em
+    height:10em;
+    width:10em;
+}
+.Color-box{
+    display:flex;
+    flex-wrap:wrap;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
 }

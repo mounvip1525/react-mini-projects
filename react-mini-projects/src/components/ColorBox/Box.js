@@ -3,20 +3,20 @@ import { choice } from '../helpers';
 import './styles.css';
 
 export default class Box extends Component {
-    static defaultProps = {
-        allColors : ["#53277C" , "#785CB3" , "#270C43"  , "#645394"  , "#BCB9D8" , "#BDB4D3" ,"#B89BD5" , "#5A466B"]
-    }
+    // static defaultProps = {
+    //     allColors : ["#EAD5E8" , "#D2AACF" , "#B87DB5"  , "#A0529C"  , "#8A2887" , "#682265" ,"#450F44" , "#2e1530"]
+    // }
     constructor(props){
         super(props)
         this.state = {
-            color: choice(this.props.allColors)
+            color: choice(this.props.colors)
         }
         this.handleClick=this.handleClick.bind(this);
     }
     pickColor(){
         let newColor;
         do {
-            newColor = choice(this.props.allColors);
+            newColor = choice(this.props.colors);
         } while (newColor === this.state.color);
         this.setState({color:newColor})
     }
