@@ -1,0 +1,21 @@
+.coin{
+    height:200px;
+    width:200px;
+}
+.coin-container{
+    border:2px solid purple;
+    width:max-content;
+    margin:auto;
+    padding:2%;
+}
+.coin-container button{
+    width:15em;
+    padding:0.95em;
+    border-radius: 3px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background:black;
+    color:white;
+    margin-top:1%;
+}

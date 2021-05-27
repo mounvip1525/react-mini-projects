@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './styles.css'
 import Coin from './Coin';
 import { choice } from './helpers';
+import head from '../../assets/head.png';
+import tail from '../../assets/tail.png';
 
 export default class CoinContainer extends Component {
     static defaultProps = {
@@ -56,9 +58,9 @@ export default class CoinContainer extends Component {
         return (
             <div className="coin-container">
                 <h3>Lets Flip a Coin!</h3>
-                <Coin coin={this.state.curCoin} />
+                {this.state.curCoin && <Coin coin={this.state.curCoin} />}
                 <button onClick={this.handleClick}>Flip</button>
-                <p>Out of {this.state.nFlips} trials , there have been {this.state.nHeads} heads and {this.state.nTails} tails.</p>
+                <p>Out of <b>{this.state.nFlips}</b> trials , there have been <b>{this.state.nHeads}</b> heads and <b>{this.state.nTails}</b> tails.</p>
             </div>
         )
     }
