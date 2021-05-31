@@ -17,7 +17,7 @@ export default class NewTodoForm extends Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        this.props.createTodo({...this.state,id:uuidv4()});
+        this.props.createTodo({...this.state,id:uuidv4(),completed:false});
         this.setState({
             todo:""
         })
@@ -25,8 +25,8 @@ export default class NewTodoForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="todo">New Todo</label>
+                <form onSubmit={this.handleSubmit} className='NewTodoForm'>
+                    {/* <label htmlFor="todo">New Todo</label> */}
                     <input 
                         placeholder="New Todo"
                         id="todo"

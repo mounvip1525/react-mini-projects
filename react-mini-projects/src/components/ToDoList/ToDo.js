@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import './styles.css';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export default class ToDo extends Component {
     constructor(props){
@@ -11,6 +13,7 @@ export default class ToDo extends Component {
         this.handleToggle=this.handleToggle.bind(this);
         this.handleChange=this.handleChange.bind(this);
         this.handleUpdate=this.handleUpdate.bind(this);
+        this.handleStrike=this.handleStrike.bind(this);
     }
     handleRemove(){
         this.props.removeTodo(this.props.id)
@@ -28,25 +31,46 @@ export default class ToDo extends Component {
             [e.target.name] : e.target.value
         })
     }
+    handleStrike(){
+        this.props.toggleStrike(this.props.id);
+    }
     render() {
         let result;
         if(this.state.isEditing){ 
-            result = (
-                <div>
-                    <form onSubmit={this.handleUpdate}>
-                        <input type="text" value={this.state.updateTodo} onChange={this.handleChange} name="updateTodo"/>
-                        <button type="submit">Save</button>
-                    </form>
-                </div>
-            )} else  result = (
-                <div>
-                    <button onClick={this.handleToggle}>edit</button>
-                    <button onClick={this.handleRemove}>x</button>
-                    <li>{this.props.todo}</li>
-                </div>
+            result= (
+                <CSSTransition key='editing' timeout={500} classNames='form'>
+                <form className='Todo-edit-form' onSubmit={this.handleUpdate}>
+                  <input
+                    type='text'
+                    value={this.state.todo}
+                    name='updateTodo'
+                    onChange={this.handleChange}
+                  />
+                  <button>Save</button>
+                </form>
+              </CSSTransition>
+                );
+            } else  result = (
+                <CSSTransition key='normal' timeout={500} classNames='task-text'>
+                    <li className='Todo-task' onClick={this.handleToggle}>
+                        {this.props.todo}
+                    </li>
+              </CSSTransition>
             )
         return (
-            result
+            <TransitionGroup
+            className={this.props.completed ? "Todo completed" : "Todo"}
+          >
+            {result}
+            <div className='Todo-buttons'>
+              <button onClick={this.handleToggle}>
+                <i class='fas fa-pen' />
+              </button>
+              <button onClick={this.handleRemove}>
+                <i class='fas fa-trash' />
+              </button>
+            </div>
+          </TransitionGroup>
         )
     }
 }
