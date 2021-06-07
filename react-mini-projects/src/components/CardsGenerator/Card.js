@@ -4,9 +4,7 @@ import './styles.css'
 export default class Card extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+            <img src={this.props.image} alt={this.props.name} />
         )
     }
 }

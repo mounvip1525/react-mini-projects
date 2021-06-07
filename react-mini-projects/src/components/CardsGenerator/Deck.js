@@ -1,24 +1,26 @@
 import React, { Component } from 'react'
 import "./styles.css";
 import axios from 'axios';
+import Card from './Card';
 
 export default class Deck extends Component {
     constructor(props){
         super(props)
         this.state = {
-            deck: null
+            deck: null,
+            drawnCards:[]
         }
         this.getCard = this.getCard.bind(this);
     }
     async componentDidMount(){
         let deck = await axios.get("https://deckofcardsapi.com/api/deck/new/shuffle")
         this.setState({
-            deck : deck.data,
-            drawnCards:[]
+            deck : deck.data
         })
         console.log("hi",this.state.deck.deck_id)
     }
     async getCard(){
+        console.log(this.state.deck.deck_id);
         let deck_id = this.state.deck.deck_id;
         
         try{
@@ -30,7 +32,7 @@ export default class Deck extends Component {
             let card = cardResult.data.cards[0];
             this.setState(st => ({
                 drawnCards: [
-                    ...st.drawn, {
+                    ...st.drawnCards, {
                         id: card.code,
                         image:card.image,
                         name:`${card.value} of ${card.suit}`
@@ -42,10 +44,14 @@ export default class Deck extends Component {
         }
     }
     render() {
+        const cards = this.state.drawnCards.map(card=>(
+            <Card name={card.name} key={card.id} image={card.image} />
+        ))
         return (
             <div>
                 <h2>Card Dealer</h2>
                 <button onClick={this.getCard}>Get Card!</button>
+                {cards}
             </div>
         )
     }
