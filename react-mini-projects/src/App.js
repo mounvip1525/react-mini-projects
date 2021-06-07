@@ -6,6 +6,7 @@ import Dice from './containers/Dice';
 import CoinFlipper from "./containers/CoinFlipper";
 import ColorBox from "./containers/ColorBox";
 import ToDoList from "./containers/ToDoList";
+import CardsGenerator from "./containers/CardsGenerator";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Coin" component={CoinFlipper} />
           <Route path="/colorBox" component={ColorBox} />
           <Route path="/todolist" component={ToDoList} />
+          <Route path='/cards' component={CardsGenerator} />
         </Switch>
       </div>
   </React.Fragment>
