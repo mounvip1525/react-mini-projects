@@ -5,7 +5,9 @@ import '../components/CardsGenerator/styles.css'
 export default class CardsGenerator extends Component {
     render() {
         return (
-            <Deck />
+            <div className="wrapper">
+                <Deck />
+            </div>
         )
     }
 }

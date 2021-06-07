@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+.wrapper{
+    font-family: 'Slabo 27px', serif;
+}
 .Deck{
     margin-top:80px;
 }
@@ -6,4 +10,26 @@
     left:0;
     right:0;
     margin:auto;
+}
+.Card-title{
+    color:purple;
+    font-size:40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.Deck-btn{
+    outline:none;
+    border:1.5px solid purple;
+    font:inherit;
+    margin:0.5em;
+    padding:0.5em 2em;
+    transition:0.25s;
+    color:purple;
+    background: transparent;
+    cursor:pointer;
+}
+.Deck-btn:hover{
+    border-color:purple;
+    color:white;
+    background:purple;
 }
