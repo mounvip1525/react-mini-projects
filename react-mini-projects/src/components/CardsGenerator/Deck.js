@@ -51,7 +51,7 @@ export default class Deck extends Component {
             <div>
                 <h2>Card Dealer</h2>
                 <button onClick={this.getCard}>Get Card!</button>
-                {cards}
+                <div className="Deck">{cards}</div>
             </div>
         )
     }
