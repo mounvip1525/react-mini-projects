@@ -7,6 +7,7 @@ import CoinFlipper from "./containers/CoinFlipper";
 import ColorBox from "./containers/ColorBox";
 import ToDoList from "./containers/ToDoList";
 import CardsGenerator from "./containers/CardsGenerator";
+import VendingMachine from "./containers/VendingMachine";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/colorBox" component={ColorBox} />
           <Route path="/todolist" component={ToDoList} />
           <Route path='/cards' component={CardsGenerator} />
+          <Route path='/VendingMachine' component={VendingMachine} />
         </Switch>
       </div>
   </React.Fragment>
