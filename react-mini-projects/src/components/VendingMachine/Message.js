@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import './styles.css';
+import React, { Component } from "react";
+import "./styles.css";
 
-export default class Message extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+class Message extends Component {
+  render() {
+    return( 
+    <div className='Message'>
+        {this.props.children}
+    </div>
+    )}
 }
+export default Message;
