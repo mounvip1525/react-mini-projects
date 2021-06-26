@@ -22,13 +22,11 @@ function App() {
           <Route path="/Coin" component={CoinFlipper} />
           <Route path="/colorBox" component={ColorBox} />
           <Route path="/todolist" component={ToDoList} />
-          <Route path='/cards' component={CardsGenerator} />
-          
-          <Route exact path='/' render={() => <VendingMachine />} />
+          <Route path='/cards' component={CardsGenerator} />  
+          <Route exact path='/vendingmachine' render={() => <VendingMachine />} />
           <Route exact path='/soda' render={() => <Soda />} />
           <Route exact path='/sardines' render={() => <Sardines />} />
           <Route exact path='/chips' render={() => <Chips />} />
-          
         </Switch>
       </div>
   </React.Fragment>
