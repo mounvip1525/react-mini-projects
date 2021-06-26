@@ -16,8 +16,8 @@ class Chips extends Component {
   }
 
   handleClick() {
-    const x = window.innerWidth * Math.random();
-    const y = window.innerHeight * Math.random();
+    const x = window.innerWidth * Math.random() - 300;
+    const y = window.innerHeight * Math.random() -300;
     this.setState(prevState => ({
       bags: [...prevState.bags, { x, y }]
     }));
