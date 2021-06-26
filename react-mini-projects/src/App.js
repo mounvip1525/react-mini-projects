@@ -8,6 +8,9 @@ import ColorBox from "./containers/ColorBox";
 import ToDoList from "./containers/ToDoList";
 import CardsGenerator from "./containers/CardsGenerator";
 import VendingMachine from "./containers/VendingMachine";
+import Soda from './components/VendingMachine/Soda';
+import Sardines from './components/VendingMachine/Sardines';
+import Chips from './components/VendingMachine/Chips';
 
 function App() {
   return (
@@ -20,7 +23,12 @@ function App() {
           <Route path="/colorBox" component={ColorBox} />
           <Route path="/todolist" component={ToDoList} />
           <Route path='/cards' component={CardsGenerator} />
-          <Route path='/VendingMachine' component={VendingMachine} />
+          
+          <Route exact path='/' render={() => <VendingMachine />} />
+          <Route exact path='/soda' render={() => <Soda />} />
+          <Route exact path='/sardines' render={() => <Sardines />} />
+          <Route exact path='/chips' render={() => <Chips />} />
+          
         </Switch>
       </div>
   </React.Fragment>
