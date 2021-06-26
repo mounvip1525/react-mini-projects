@@ -5,7 +5,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <div className='Navbar'>
-                <NavLink exact activeClassName='Navbar-active' to='/'>
+                <NavLink exact activeClassName='Navbar-active' to='/vendingMachine'>
                 Home
                 </NavLink>
                 <NavLink exact activeClassName='Navbar-active' to='/chips'>

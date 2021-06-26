@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Message from "../components/VendingMachine/Message";
 import "../components/VendingMachine/styles.css";
 import vendingMachineImg from "../assets/VendingMachine.png"
+import Navbar from '../components/VendingMachine/Navbar';
 
 class VendingMachine extends Component {
   render() {
@@ -11,6 +12,7 @@ class VendingMachine extends Component {
         className='VendingMachine'
         style={{ backgroundImage: `url(${vendingMachineImg})` }}
       >
+          <Navbar />
         <Message>
           <h1>hello i am a vending machine. what would you like to eat?</h1>
         </Message>

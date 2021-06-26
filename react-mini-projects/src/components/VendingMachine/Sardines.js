@@ -15,7 +15,7 @@ class Sardines extends Component {
       >
         <Message>
           <h1>you don't eat the sardines. the sardines, they eat you!</h1>
-          <Link to='/'>Go Back</Link>
+          <Link to='/vendingMachine'>Go Back</Link>
         </Message>
       </div>
     );
