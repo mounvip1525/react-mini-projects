@@ -1,0 +1,127 @@
+.Chips {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Chips button {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: pink;
+  }
+  
+  .Chips button:hover {
+    background-color: red;
+    cursor: pointer;
+  }
+  
+  .Chips button:active,
+  .Chips button:focus {
+    outline: none;
+  }
+  
+  .bag {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .Navbar {
+    background: rgba(69, 90, 100, 1);
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    position:absolute;
+    top:0;
+    
+  }
+  
+  .Navbar a {
+    text-decoration: none;
+    color: rgba(144, 164, 174, 1);
+    transition: all 0.5s ease;
+  }
+  .Navbar a.Navbar-active {
+    color: white;
+  }
+
+  .Sardines {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Sardines .message {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+  }
+  
+  .Sardines .message h1 {
+    text-align: center;
+    color: white;
+  }
+
+  .Soda {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+  }
+  
+  .Soda img {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .VendingMachine {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .VendingMachine .Message {
+    width: 30%;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .Message {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
