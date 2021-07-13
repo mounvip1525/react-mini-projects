@@ -1,0 +1,42 @@
+.main{
+    margin-top:0;
+    /* background:purple; */
+}
+.main h3{
+    margin:0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    /* color:white; */
+}
+.card-main{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.card-main div{
+    width:25%;
+    height:40vh;
+    background:#80008038;
+    margin:3%;
+    padding:1%;
+}
+.card-box h4{
+    font-size:1.5rem;
+    color:white;
+    margin-bottom:0;
+    text-transform: uppercase;
+}
+.card-box button{
+    color:black;
+    cursor:pointer;
+    padding:2% 10%;
+    background:#800080;
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    font-size:1.1rem;
+}
+.card-box button a{
+    color:black;
+    text-decoration: none;
+}

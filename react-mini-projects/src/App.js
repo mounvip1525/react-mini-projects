@@ -11,12 +11,14 @@ import VendingMachine from "./containers/VendingMachine";
 import Soda from './components/VendingMachine/Soda';
 import Sardines from './components/VendingMachine/Sardines';
 import Chips from './components/VendingMachine/Chips';
+import Main from './containers/Main';
 
 function App() {
   return (
     <React.Fragment>
       <div className="App">
         <Switch>
+          <Route path="/" exact component={Main} />
           <Route path="/Lottery" exact component={Lottery} />
           <Route path="/Dice" component={Dice} />
           <Route path="/Coin" component={CoinFlipper} />
